@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Chapter 8 WebSockets Dependencies</title>
+</head>
+
+<body>
+  <div class="container">
+    <h1 class="my-3 text-2xl underline font-semi-bold text-gray-700 text-center">Chapter 8 WebSockets Dependencies</h1>
+    <form id="form-connect">
+      <div class="input-group mb-3">
+        <input id="username" type="text" class="inline w-3/4 rounded-md border-0 ml-1 py-2 pl-7 pr-20 mx-0 ring-1 ring-inset ring-gray-300 placeholder:text-xl text-gray-700 focus:ring-2 focus:ring-inset focus:ring-green-600 sm:text-sm sm:leading-6" placeholder="Username" required>
+        <button class="bg-teal-500 hover:bg-teal-700 text-white font-bold py-2 px-4 mx-0 rounded" type="submit" id="button-connect">Connect</button>
+      </div>
+    </form>
+    <form id="form-send">
+      <div class="input-group mb-3">
+        <input id="message" type="text" class="inline w-3/4 rounded-md border-0 ml-1 py-2 pl-7 pr-20 mx-0 ring-1 ring-inset ring-gray-300 placeholder:text-xl text-gray-700 focus:ring-2 focus:ring-inset focus:ring-green-600 sm:text-sm sm:leading-6" placeholder="Message" required disabled>
+        <button class="bg-sky-500 hover:bg-green-700 text-white font-bold py-2 px-4 mx-0 rounded" type="submit" id="button-send" disabled>Send</button>
+      </div>
+    </form>
+    <ul id="messages"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
