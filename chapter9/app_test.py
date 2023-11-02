@@ -6,7 +6,7 @@ from asgi_lifespan import LifespanManager
 from fastapi import status
 import httpx
 
-from app import app
+from chapter9.app import app
 
 
 @pytest.fixture(scope="session")

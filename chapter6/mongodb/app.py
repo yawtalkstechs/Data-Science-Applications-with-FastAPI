@@ -2,8 +2,8 @@ from bson import ObjectId, errors
 from fastapi import Depends, FastAPI, HTTPException, Query, status
 from motor.motor_asyncio import AsyncIOMotorDatabase
 
-from database import get_database
-from models import Post, PostCreate, PostPartialUpdate
+from chapter6.mongodb.database import get_database
+from chapter6.mongodb.models import Post, PostCreate, PostPartialUpdate
 
 app = FastAPI()
 
