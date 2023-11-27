@@ -12,7 +12,7 @@ class PredictionOutput(BaseModel):
 class PredictionInput(BaseModel):
     text: str
 
-memory = joblib.memory(location="cache.joblib")
+memory = joblib.Memory(location="cache.joblib")
 
 @memory.cache(ignore=["model"])
 def predict(model: Pipeline, text: str) -> int:
@@ -25,7 +25,7 @@ class NewsgroupsModel:
 
     def load_model(self) -> None:
         """Loads the model"""
-        model_file = os.path.join(os.path.dirname(__file__), "newsgroups_model.joblib")
+        model_file = os.path.join(os.path.dirname(__file__), "newgroups_model.joblib")
         loaded_model: tuple[Pipeline, list[str]] = joblib.load(model_file)
         model, targets = loaded_model
         self.model = model
