@@ -2,4 +2,8 @@ chapter6_sqlalchemy.db
 chapter6_sqlalchemy_relationship.db
 .venv/
 .env
+.vscode/
+.pytest_cache/
+.git/
+.github/
 *.joblib
